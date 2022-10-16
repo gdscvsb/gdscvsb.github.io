@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&amp;family=Poppins:wght@100;300;400;500;700&amp;family=Ubuntu:wght@300;500;700&amp;display=swap"
+        rel="stylesheet">
+    <title>GDSC VSB</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logodiv">
+            <img src="https://github.com/gdscvsb/gdscvsb.github.io/blob/main/images/gdsclogotrp.png?raw=true"
+                alt="gdscvsblogo" class="logo">
+
+        </div>
+        <div class="inp">
+            <form action="#">
+                <input maxlength="10" type="text" name="certid" placeholder="Enter Certificate ID" id="certid">
+                <button type="submit" onclick=verify()>Verify</button>
+            </form>
+        </div>
+        <div class="outputdiv">
+            <p id="output"></p>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="verify.js"></script>
+<script>
+
+    function getCurrentURL() {
+        return window.location.href
+    }
+    const url = getCurrentURL()
+    let id = url.slice(49, 59)
+
+    let certname = ""
+        let unkonwn = ""
+        
+
+    function directverify() {
+        for (let i = 0; i < data.length; i++) {
+            if (id === data[i].id) {
+                certname = data[i].name
+                let tag = "This certificate is proudly presented to <h1>" + certname + "</h1> for the successful completion of First Jetpack Compose App during <h3>Compose Camp 2022</h3>"
+            document.getElementById("output").innerHTML = tag
+            break
+            } else {
+                let note = "Not a Valid Certificate ID"
+            document.getElementById("output").innerHTML = note
+            }
+            console.log(certname)
+        }
+        
+        
+
+
+    }
+    function verify() {
+        let input = document.getElementById("certid").value
+        for (let i = 0; i < data.length; i++) {
+            if (input === data[i].id) {
+                certname = data[i].name
+                let tag = "This certificate is proudly presented to <h1>" + certname + "</h1> for the successful completion of First Jetpack Compose App during <h3>Compose Camp 2022</h3>"
+            document.getElementById("output").innerHTML = tag
+            break
+            } else {
+                let note = "Not a Valid Certificate ID"
+            document.getElementById("output").innerHTML = note
+            }
+            console.log(certname)
+        }
+        
+        
+
+
+    }
+    directverify()
+
+
+</script>
+
+</html>
