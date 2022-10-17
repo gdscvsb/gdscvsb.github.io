@@ -68,8 +68,12 @@ let data = [
         "name":"Vignesh Nagavel"
     },
     {
-        "id":"22GDSC9201",
-        "name":"VARUN S"
+        "id":"22GDSC9114",
+        "name":"S.Harish"
+    },
+    {
+        "id":"22GDSC9115",
+        "name":"SANGAVI C"
     }
 
 ]
